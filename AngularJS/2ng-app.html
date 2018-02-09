@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>ng-app指令,angular找到第一个ng-app就不会再找了，在一个页面中只使用一个ng-app.</title>
+	</head>
+
+	<body>
+		<input type="button" ng-app="myApp1" ng-controller="App1Controller" ng-click="do1()" value="按钮1" />
+		<input type="button" ng-app="myApp2" ng-controller="App2Controller" ng-click="do2()" value="按钮2">
+		<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+		<script>
+			/**
+			 * myApp1 Module
+			 *
+			 * Description
+			 */
+			var myApp1 = angular.module('myApp1', []);
+			myApp1.controller('App1Controller', ['$scope', function($scope) {
+				$scope.do1 = function() {
+					console.log(11111);
+				};
+			}]);
+			var myApp2 = angular.module('myApp2', []);
+			myApp2.controller('App2Controller', ['$scope', function($scope) {
+				$scope.do2 = function() {
+					console.log(22222);
+				};
+			}]);
+			//手动的让第二个div被myapp2管理
+			angular.bootstrap(document.querySelector('[ng-app="myApp2"]'), ['myApp2']);
+		</script>
+	</body>
+
+</html>

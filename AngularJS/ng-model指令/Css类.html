@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+		<style>
+			input.ng-valid {
+				background-color: lightblue;
+			}
+			
+			input.ng-invalid {
+				background-color: indianred;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<form ng-app="" name="myForm">
+			输入你的名字:
+			<input name="myName" ng-model="myText" required>
+		</form>
+
+		<p>编辑文本域，不同状态背景颜色会发送变化。</p>
+		<p>文本域添加了 required 属性，该值是必须的，如果为空则是不合法的。</p>
+		<p>ng-valid: 验证通过</p>
+		<p>ng-invalid: 验证失败</p>
+		<p>ng-valid-[key]: 由$setValidity添加的所有验证通过的值</p>
+		<p>ng-invalid-[key]: 由$setValidity添加的所有验证失败的值</p>
+		<p>ng-pristine: 控件为初始状态</p>
+		<p>ng-dirty: 控件输入值已变更</p>
+		<p>ng-touched: 控件已失去焦点</p>
+		<p>ng-untouched: 控件未失去焦点</p>
+		<p>ng-pending: 任何为满足$asyncValidators的情况</p>
+
+	</body>
+
+</html>

@@ -1,4 +1,5 @@
 <?php
+
 echo <<<EOT
 {
 "records":[
@@ -20,4 +21,3 @@ echo <<<EOT
 ]
 }
 EOT;
-?>

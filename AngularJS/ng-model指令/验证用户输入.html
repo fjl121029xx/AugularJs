@@ -8,11 +8,11 @@
 
 	<body>
 
-		<form ng-app="" name="myForm" >
+		<form ng-app="" name="myForm" > 
 			Email:
 			<input type="email" name="myAddress" ng-model="ts">
 			<span ng-show="myForm.myAddress.$error.email">不是一个合法的邮箱地址</span> <br>
-			{{ ts }}
+			{{ts}}
 		</form>
 
 		<p>在输入框中输入你的邮箱地址，如果不是一个合法的邮箱地址，会弹出提示信息。</p>
